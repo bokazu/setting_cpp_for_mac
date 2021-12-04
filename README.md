@@ -1,7 +1,6 @@
 # M1 Macでclangからg++へ変更する方法
 
 ## 1. 概要
----
 Macは標準でclangのみを搭載している。例えば、ターミナルで
 ```
 g++ --version
@@ -31,14 +30,12 @@ InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault
 [初心者向け　MacでOperation not permittedの解決方法](https://qiita.com/iwaseasahi/items/9d2e29b02df5cce7285d)
 
 ## 2.homebrewでgccをインストールする
----
 ターミナルで次のことを実行し、GCCをインストールする。
 ```
 brew install gcc
 ```
 
 ## 3.リンクの設定
----
 さきほど導入したGCCを使用するためにシンボリックリンクを貼る。
 ```
 sudo ln -sf $(ls -d /opt/homebrew/bin/* | grep "/g++-" | sort -r | head -n1) /usr/local/bin/gcc
@@ -61,7 +58,6 @@ ln : Operation not permitted
 というエラーが発生する場合がある。これを解決するには「設定」→「セキュリティとプライバシー」→「フルディスクアクセス」からターミナルに対して許可を与える必要がある。許可を与えたらmacを再起動すればよい。
 
 ## 4. g++のversionの確認
----
 上記の手順を踏んだ後で、ターミナルでg++のversionを確認してみる。すると、以下のようになるはずだ。
 ```
 $ g++ --version
@@ -73,7 +69,6 @@ $ g++ --version
 このように表示されれば設定は完了している。
 
 ## 5. VSCodeでの設定
----
 エディタとしてVScodeを使用している場合は、そちらのほうの設定も少しばかりいじる必要がある。
 まずは、`c_cpp_properties.json`を開いて以下のように設定する。
 ```
