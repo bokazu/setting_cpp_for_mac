@@ -39,7 +39,7 @@ brew install gcc
 さきほど導入したGCCを使用するためにシンボリックリンクを貼る。
 ```
 sudo ln -sf $(ls -d /opt/homebrew/bin/* | grep "/g++-" | sort -r | head -n1) /usr/local/bin/gcc
-sudo ln -sf $(ls -d /opt/homebrews/bin/* | grep "/g++-" | sort -r | head -n1) /usr/local/bin/g++
+sudo ln -sf $(ls -d /opt/homebrew/bin/* | grep "/g++-" | sort -r | head -n1) /usr/local/bin/g++
 ```
 ここで、ネット上にあがっている記事には`/opt/homebrew/`の部分が`/usr/local/`となっているものもあるがこれはIntel製のCPUに対するものなので注意が必要である。M1ではhomebrewによるinstall先として`/opt/homebrew/bin`が推奨されているため違いが生じる。
 
