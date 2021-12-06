@@ -70,7 +70,7 @@ $ g++ --version
 
 ## 5. VSCodeでの設定
 エディタとしてVScodeを使用している場合は、そちらのほうの設定も少しばかりいじる必要がある。
-まずは、`c_cpp_properties.json`を開いて以下のように設定する。
+まずは、`c_cpp_properties.json`を開いて以下のように設定する。このファイルは`cmd + shift + P`を押し、「C/C++ 構成の編集(JSON)」を選択する。
 ```
 {
     "configurations": [
